@@ -7,19 +7,13 @@ var platform = sessionStorage.getItem('platformStorage');
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open( "GET", "https://api.r6stats.com/api/v1/players/" + username + "/?platform=" + platform, false );
 xmlHttp.send( null );
-
 r6Stats = JSON.parse(xmlHttp.responseText);
-console.log(r6Stats);
-console.log(r6Stats);
 
 //User Hits Search
 $('#searchButton').click(function() {
   sessionStorage.setItem("usernameStorage", $('#username').val());
   sessionStorage.setItem("platformStorage", $('#platform').val());
 });
-console.log(username);
-console.log(platform);
-
 
 
 //Populate player name
